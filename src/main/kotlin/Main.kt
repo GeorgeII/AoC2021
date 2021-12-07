@@ -14,4 +14,5 @@ fun main() {
 
     val d4Filename = "data/inputDay4"
     println(Day4.part1(d4Filename))
+    println(Day4.part2(d4Filename))
 }
