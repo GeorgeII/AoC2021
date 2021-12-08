@@ -27,5 +27,4 @@ object Day1 {
 
         return res
     }
-
 }

@@ -51,7 +51,6 @@ object Day4 {
             }
         }
 
-
         var currLot = 5
         while (currLot < numbers.size) {
             val fiveNums = numbers.subList(currLot - 5, currLot)
@@ -79,7 +78,6 @@ object Day4 {
 
         return -1
     }
-
 
     fun part2(file: String): Int {
         val input = File(file)
@@ -130,7 +128,6 @@ object Day4 {
             }
         }
 
-
         val boardsWon = BooleanArray(boards.size) { false }
         var currLot = 5
         while (currLot < numbers.size) {
@@ -149,10 +146,9 @@ object Day4 {
 
                 for ((idx, board) in boards.withIndex()) {
                     if (checkIfWin(board)) {
-                        if (boardsWon.filterIndexed { index, b ->  index != idx}.all { it }) {
+                        if (boardsWon.filterIndexed { index, _ -> index != idx }.all { it }) {
                             return calcRes(board) * num
-                        }
-                        else boardsWon[idx] = true
+                        } else boardsWon[idx] = true
                     }
                 }
             }
@@ -162,5 +158,4 @@ object Day4 {
 
         return -1
     }
-
 }

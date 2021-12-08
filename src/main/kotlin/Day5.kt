@@ -5,9 +5,10 @@ object Day5 {
     fun part1(file: String): Int {
         val coords = File(file)
             .useLines { it.toList() }
-            .map { it.split(" -> ")
-                .map { it.split(",").map { it.toInt() } }
-                .map { Pair(it[0], it[1]) }
+            .map {
+                it.split(" -> ")
+                    .map { it.split(",").map { it.toInt() } }
+                    .map { Pair(it[0], it[1]) }
             }
 
         val rowNum = coords
@@ -36,8 +37,7 @@ object Day5 {
                     for (i in minY..maxY) {
                         bottomMap[x1][i] += 1
                     }
-                }
-                else if (y1 == y2) {
+                } else if (y1 == y2) {
                     for (i in minX..maxX) {
                         bottomMap[i][y2] += 1
                     }
@@ -52,5 +52,4 @@ object Day5 {
 
         return res
     }
-
 }

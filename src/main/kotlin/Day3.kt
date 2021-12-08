@@ -21,8 +21,6 @@ object Day3 {
             .joinToString("")
             .toInt(2)
 
-
         return gammaRate * epsilon
     }
-
 }

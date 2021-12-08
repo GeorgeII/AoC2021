@@ -15,9 +15,9 @@ object Day2 {
             .fold(Position(0, 0)) { acc, (command, dist) ->
                 when (command) {
                     "forward" -> acc.copy(horizontal = acc.horizontal + dist)
-                    "down"    -> acc.copy(vertical = acc.vertical + dist)
-                    "up"      -> acc.copy(vertical = acc.vertical - dist)
-                    else      -> acc
+                    "down" -> acc.copy(vertical = acc.vertical + dist)
+                    "up" -> acc.copy(vertical = acc.vertical - dist)
+                    else -> acc
                 }
             }
 
@@ -34,9 +34,9 @@ object Day2 {
             .fold(AimedPosition(0, 0, 0)) { acc, (command, dist) ->
                 when (command) {
                     "forward" -> acc.copy(horizontal = acc.horizontal + dist, vertical = acc.vertical + acc.aim * dist)
-                    "down"    -> acc.copy(aim = acc.aim + dist)
-                    "up"      -> acc.copy(aim = acc.aim - dist)
-                    else      -> acc
+                    "down" -> acc.copy(aim = acc.aim + dist)
+                    "up" -> acc.copy(aim = acc.aim - dist)
+                    else -> acc
                 }
             }
 
